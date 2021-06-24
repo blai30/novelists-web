@@ -1,16 +1,20 @@
+import { NextPage } from 'next';
 import Head from 'next/head'
 import Image from 'next/image'
-import Layout from '../components/shared/Layout'
+import Layout, { getLayout } from '../components/shared/Layout'
 
 const Home = () => {
   return (
-    <Layout>
+    <>
       <button className="bg-green-300">
         Tailwind
       </button>
       Hello world
-    </Layout>
+    </>
   )
 }
+
+// Surround {page} with a sub-layout if desired.
+Home.getLayout = (page: NextPage) => getLayout(page)
 
 export default Home

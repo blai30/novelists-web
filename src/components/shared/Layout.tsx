@@ -1,9 +1,10 @@
+import { NextPage } from "next";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: React.PropsWithChildren<{}>) => {
   return (
-    <main>
+    <main id="layout">
       <div className="flex flex-col min-h-screen">
         <Header />
         <div className="flex-grow">
@@ -18,5 +19,7 @@ const Layout = ({ children }) => {
     </main>
   )
 }
+
+export const getLayout = (page: NextPage) => <Layout>{page}</Layout>
 
 export default Layout
