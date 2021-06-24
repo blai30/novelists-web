@@ -1,13 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Layout from '../components/shared/Layout'
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="text-xl font-sans">
+    <Layout>
       <button className="bg-green-300">
         Tailwind
       </button>
       Hello world
-    </div>
+    </Layout>
   )
 }
+
+export default Home
