@@ -3,7 +3,7 @@ import DarkToggle from '@/components/DarkToggle'
 
 const Header = () => {
   return (
-    <header id="header" className="w-full bg-blue-300">
+    <header id="header" className="inline-flex items-center w-full bg-blue-300">
       <Link href="/">
         <a>Home</a>
       </Link>
