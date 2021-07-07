@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import DarkToggle from '@/components/DarkToggle'
 
 const Header = () => {
   return (
@@ -9,6 +10,7 @@ const Header = () => {
       <Link href="/browse">
         <a>Browse</a>
       </Link>
+      <DarkToggle />
     </header>
   )
 }
