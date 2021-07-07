@@ -1,11 +1,16 @@
-import 'tailwindcss/tailwind.css'
+import '@/styles/globals.css'
+import { NextPage } from 'next'
+import { ThemeProvider } from 'next-themes'
 import type { AppProps } from 'next/app'
-import { NextPage } from 'next';
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   // @ts-ignore
   const getLayout = Component.getLayout || ((page: NextPage) => page)
-  return getLayout(<Component {...pageProps} />)
+  return (
+    <ThemeProvider attribute="class">
+      {getLayout(<Component {...pageProps} />)}
+    </ThemeProvider>
+  )
 }
 
 export default MyApp

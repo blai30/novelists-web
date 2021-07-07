@@ -1,36 +1,15 @@
-const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-const mode = process.env.TAILWIND_MODE ? 'jit' : 'aot';
-
 module.exports = {
-  mode: mode,
+  mode: 'jit',
   purge: [
     './src/**/*.{js,jsx,ts,tsx,vue,html}',
   ],
   darkMode: 'class',
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      black: colors.black,
-      white: colors.white,
-      gray: colors.coolGray,
-      red: colors.red,
-      yellow: colors.amber,
-      green: colors.emerald,
-      blue: colors.blue,
-      indigo: colors.indigo,
-      purple: colors.violet,
-      pink: colors.pink,
-    },
     extend: {
-      zIndex: {
-        '-10': '-10',
-      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
       },
       typography: (theme) => ({
         dark: {

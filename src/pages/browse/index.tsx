@@ -1,5 +1,5 @@
-import { NextPage } from "next";
-import { getLayout } from "../../components/shared/Layout";
+import { NextPage } from 'next'
+import { getLayout } from '@/components/shared/Layout'
 
 const Browse = () => {
   return (

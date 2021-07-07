@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "@/components/shared/Footer";
+import Header from "@/components/shared/Header";
 
 const Layout = ({ children }: React.PropsWithChildren<{}>) => {
   return (
