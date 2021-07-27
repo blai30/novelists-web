@@ -9,6 +9,7 @@ specifiers:
   '@types/react': 17.0.11
   autoprefixer: ^10.2.6
   axios: ^0.21.1
+  dayjs: ^1.10.6
   eslint: 7.29.0
   eslint-config-next: 11.0.0
   next: 11.0.0
@@ -23,6 +24,7 @@ dependencies:
   '@headlessui/react': 1.3.0_react-dom@17.0.2+react@17.0.2
   '@heroicons/react': 1.0.1_react@17.0.2
   axios: 0.21.1
+  dayjs: 1.10.6
   next: 11.0.0_2dbe935e140170ce01c975771f1adcbd
   next-themes: 0.0.15_202b18601d71dc92f6dbf39b46c5242f
   react: 17.0.2
@@ -952,6 +954,10 @@ packages:
   /data-uri-to-buffer/3.0.1:
     resolution: {integrity: sha512-WboRycPNsVw3B3TL559F7kuBUM4d8CgMEvk6xEJlOp7OBPjt6G7z8WMWlD2rOFZLk6OYfFIUGsCOWzcQH9K2og==}
     engines: {node: '>= 6'}
+    dev: false
+
+  /dayjs/1.10.6:
+    resolution: {integrity: sha512-AztC/IOW4L1Q41A86phW5Thhcrco3xuAA+YX/BLpLWWjRcTj5TOt/QImBLmCKlrF7u7k47arTnOyL6GnbG8Hvw==}
     dev: false
 
   /debug/2.6.9:

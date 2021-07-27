@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import axios from 'axios'
+import dayjs from 'dayjs'
 import { getLayout } from '@/components/shared/Layout'
 import { Publication } from '@/models/publication'
 
@@ -63,11 +64,7 @@ const Browse = () => {
                 </div>
               </td>
               <td className="px-6 py-4 text-sm text-gray-500">
-                {new Intl.DateTimeFormat("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "2-digit"
-                }).format(new Date(publication.created_at))}
+                {dayjs(publication.created_at).format('MMM D, YYYY')}
               </td>
             </tr>
           ))}
