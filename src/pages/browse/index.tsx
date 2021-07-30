@@ -18,8 +18,6 @@ const Browse = () => {
     getPublications()
   }, [])
 
-  console.log(publications);
-
   return (
     <div className="flex flex-col">
       <table className="divide-y divide-gray-200">
@@ -50,7 +48,7 @@ const Browse = () => {
             <tr key={publication.id}>
               <td className="px-6 py-4">
                 <div className="text-sm font-medium text-gray-900">
-                  <Link href={`${publication.id}`}>
+                  <Link href={`/publication/${publication.id}`}>
                     {publication.title}
                   </Link>
                 </div>
@@ -64,7 +62,7 @@ const Browse = () => {
                 </div>
               </td>
               <td className="px-6 py-4 text-sm text-gray-500">
-                {dayjs(publication.created_at).format('MMM D, YYYY')}
+                {dayjs(publication.created_at).format('MMMM D, YYYY')}
               </td>
             </tr>
           ))}
