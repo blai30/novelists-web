@@ -17,10 +17,10 @@ const PublicationPage = () => {
       setPublication(response.data)
     }
 
-    const getChapters = async () => {
-      const response = await axios.get<Chapter[]>(`${process.env.API_URI}/chapters?publication_id=${router.query.id}`)
-      setChapters(response.data)
-    }
+    // const getChapters = async () => {
+    //   const response = await axios.get<Chapter[]>(`${process.env.API_URI}/chapters?publication_id=${router.query.id}`)
+    //   setChapters(response.data)
+    // }
 
     getPublication()
   }, [router.query.id])
@@ -41,5 +41,10 @@ const PublicationPage = () => {
 }
 
 PublicationPage.getLayout = (page: NextPage) => getLayout(page)
+
+// export const getStaticPaths = async () => {
+//   const response = await axios.get<Publication[]>(`${process.env.API_URI}/publications`)
+//   const data = await response.data
+// }
 
 export default PublicationPage

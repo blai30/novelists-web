@@ -7,8 +7,11 @@ const Header = () => {
       <Link href="/">
         <a>Home</a>
       </Link>
-      <Link href="/browse">
-        <a>Browse</a>
+      <Link href="/publications">
+        <a>Publications</a>
+      </Link>
+      <Link href="/users">
+        <a>Users</a>
       </Link>
       <DarkToggle />
     </header>

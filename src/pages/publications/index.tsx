@@ -6,7 +6,7 @@ import dayjs from 'dayjs'
 import { getLayout } from '@/components/shared/Layout'
 import { Publication } from '@/models/publication'
 
-const Browse = () => {
+const Publications = () => {
   const [publications, setPublications] = useState<Publication[]>([])
 
   useEffect(() => {
@@ -48,12 +48,12 @@ const Browse = () => {
             <tr key={publication.id}>
               <td className="px-6 py-4">
                 <div className="text-sm font-medium text-gray-900">
-                  <Link href={`/publication/${publication.id}`}>
+                  <Link href={`/publications/${publication.id}`}>
                     {publication.title}
                   </Link>
                 </div>
                 <div className="text-sm text-gray-500">
-                  User ID: {publication.user_id}
+                  User: {publication.user.display_name}
                 </div>
               </td>
               <td className="px-6 py-4">
@@ -72,6 +72,6 @@ const Browse = () => {
   )
 }
 
-Browse.getLayout = (page: NextPage) => getLayout(page)
+Publications.getLayout = (page: NextPage) => getLayout(page)
 
-export default Browse
+export default Publications
