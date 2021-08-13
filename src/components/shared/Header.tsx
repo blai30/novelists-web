@@ -13,6 +13,9 @@ const Header = () => {
       <Link href="/users">
         <a>Users</a>
       </Link>
+      <Link href="/users/login">
+        <a>Login</a>
+      </Link>
       <DarkToggle />
     </header>
   )
